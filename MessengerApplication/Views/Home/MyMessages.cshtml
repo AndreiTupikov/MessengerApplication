@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "MyMessages";
+}
+
+<h2>My Messages</h2>
+<p>
+    @Html.ActionLink("Send new message", "Send")
+</p>
+
+<input type="radio" class="btn btn-check" name="options" id="ReceivedMessages" autocomplete="off" onchange="GetMessages()" checked="checked">
+<label class="btn btn-secondary" for="ReceivedMessages">Received</label>
+
+<input type="radio" class="btn btn-check" name="options" id="SentMessages" autocomplete="off" onchange="GetMessages()">
+<label class="btn btn-secondary" for="SentMessages">Sent</label>
+
+<div id="messages-table">
+</div>
+

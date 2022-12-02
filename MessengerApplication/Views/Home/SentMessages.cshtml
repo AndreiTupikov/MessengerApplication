@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MessengerApplication.Models.Message>
+<h3>Received</h3>
+<table class="table table-bordered">
+    <tr>
+        <td>Topic</td>
+        <td>Receiver</td>
+        <td>Date</td>
+    </tr>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Topic</td>
+            <td>@m.Receiver_Id</td>
+            <td>@m.Date</td>
+        </tr>
+    }
+</table>
